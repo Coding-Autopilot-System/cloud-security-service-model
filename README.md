@@ -69,8 +69,7 @@ graph LR
   [`docs/00-executive-overview.md`](docs/00-executive-overview.md).
 
 ## Using the static site
-Open [`docs/site/index.html`](docs/site/index.html) to browse a minimal HTML version of the content with navigation and search.
-Open [`site/index.html`](site/index.html) to browse a minimal HTML version of the content with navigation and search.
+Open [`docs/index.html`](docs/index.html) to browse a minimal HTML version of the content with navigation and search.
 
 ## Repo structure
 The repository includes:
