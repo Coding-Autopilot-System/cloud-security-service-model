@@ -7,22 +7,45 @@
   <link rel="stylesheet" href="../assets/style.css" />
 </head>
 <body>
-  <header>
-    <strong>Runbooks</strong>
+  <header class="topbar">
+    <div class="topbar-content">
+      <div>
+        <p class="eyebrow">Runbooks</p>
+        <h1>Operational playbooks</h1>
+        <p class="subhead">Consistent response steps for incidents, drift, and onboarding.</p>
+      </div>
+      <div class="topbar-actions">
+        <a class="button primary" href="../index.html">Back to home</a>
+        <a class="button secondary" href="../20-runbooks/README.md">View Markdown</a>
+      </div>
+    </div>
   </header>
-  <div class="container">
-    <nav>
+  <div class="layout">
+    <nav class="sidebar">
       <div class="search">
         <input id="search" type="text" placeholder="Search pages" />
       </div>
+      <div class="nav-title">Documentation</div>
       <div id="nav-links"></div>
     </nav>
-    <main>
-      <div class="card">
-        <h1>Runbooks</h1>
-        <p>Operational guides for triage, remediation, and onboarding.</p>
-        <p><a href="../20-runbooks/README.md">View Markdown runbook index</a></p>
-      </div>
+    <main class="content">
+      <section class="card">
+        <h2>Runbook library</h2>
+        <p>Use these runbooks to standardize incident response and operational workflows.</p>
+        <div class="pill-group">
+          <span class="pill">Incident triage</span>
+          <span class="pill">Policy drift</span>
+          <span class="pill">Azure Arc onboarding</span>
+        </div>
+      </section>
+      <section class="card">
+        <h2>Related sections</h2>
+        <div class="link-list">
+          <a href="templates.html">Template library</a>
+          <a href="operating-model.html">Operating model</a>
+          <a href="kpis.html">Metrics &amp; KPIs</a>
+        </div>
+      </section>
     </main>
   </div>
   <script src="../assets/app.js"></script>
