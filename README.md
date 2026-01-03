@@ -47,7 +47,7 @@ interfaces, measurable outcomes, and lifecycle management across Azure and hybri
 - Runbooks: [`docs/20-runbooks/README.md`](docs/20-runbooks/README.md)
 - Templates: [`docs/21-templates/README.md`](docs/21-templates/README.md)
 - Diagrams: [`docs/22-diagrams/README.md`](docs/22-diagrams/README.md)
-- Static site: [`site/index.html`](site/index.html)
+- Static site: [`docs/site/index.html`](docs/site/index.html)
 
 ## Service lifecycle (preview)
 ```mermaid
@@ -68,7 +68,7 @@ graph LR
   [`docs/00-executive-overview.md`](docs/00-executive-overview.md).
 
 ## Using the static site
-Open [`site/index.html`](site/index.html) to browse a minimal HTML version of the content with navigation and search.
+Open [`docs/site/index.html`](docs/site/index.html) to browse a minimal HTML version of the content with navigation and search.
 
 ## Repo structure
 The repository includes:

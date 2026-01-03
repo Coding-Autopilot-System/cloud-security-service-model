@@ -169,22 +169,23 @@ Tagline: “A pragmatic, enterprise Cloud Security service operating model (Azur
       okrs.md
       kpi-cadence.md
 
-  site/
-    README.md
-    index.html
-    assets/
-      style.css
-      app.js
-    pages/
-      overview.html
-      service-definition.html
-      operating-model.html
-      architecture.html
-      kpis.html
-      roadmap.html
-      runbooks.html
-      templates.html
-      hybrid.html
+  docs/
+    site/
+      README.md
+      index.html
+      assets/
+        style.css
+        app.js
+      pages/
+        overview.html
+        service-definition.html
+        operating-model.html
+        architecture.html
+        kpis.html
+        roadmap.html
+        runbooks.html
+        templates.html
+        hybrid.html
 
   .github/
     workflows/
