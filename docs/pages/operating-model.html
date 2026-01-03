@@ -7,22 +7,45 @@
   <link rel="stylesheet" href="../assets/style.css" />
 </head>
 <body>
-  <header>
-    <strong>Operating Model</strong>
+  <header class="topbar">
+    <div class="topbar-content">
+      <div>
+        <p class="eyebrow">Operating Model</p>
+        <h1>Plan, build, run, improve</h1>
+        <p class="subhead">Cadence, escalation paths, and predictable operations.</p>
+      </div>
+      <div class="topbar-actions">
+        <a class="button primary" href="../index.html">Back to home</a>
+        <a class="button secondary" href="../05-operating-model.md">View Markdown</a>
+      </div>
+    </div>
   </header>
-  <div class="container">
-    <nav>
+  <div class="layout">
+    <nav class="sidebar">
       <div class="search">
         <input id="search" type="text" placeholder="Search pages" />
       </div>
+      <div class="nav-title">Documentation</div>
       <div id="nav-links"></div>
     </nav>
-    <main>
-      <div class="card">
-        <h1>Operating Model</h1>
-        <p>Plan, build, run, and improve with defined cadence and escalation paths.</p>
-        <p><a href="../05-operating-model.md">View Markdown doc</a></p>
-      </div>
+    <main class="content">
+      <section class="card">
+        <h2>Operating cadence</h2>
+        <p>Weekly, monthly, quarterly, and annual rituals that keep the service measurable and predictable.</p>
+        <div class="pill-group">
+          <span class="pill">Weekly ops review</span>
+          <span class="pill">Monthly service review</span>
+          <span class="pill">Quarterly risk review</span>
+        </div>
+      </section>
+      <section class="card">
+        <h2>Related sections</h2>
+        <div class="link-list">
+          <a href="kpis.html">Metrics &amp; KPIs</a>
+          <a href="roadmap.html">Roadmap &amp; maturity</a>
+          <a href="runbooks.html">Runbooks</a>
+        </div>
+      </section>
     </main>
   </div>
   <script src="../assets/app.js"></script>

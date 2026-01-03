@@ -3,26 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roadmap</title>
+  <title>Roadmap & Maturity</title>
   <link rel="stylesheet" href="../assets/style.css" />
 </head>
 <body>
-  <header>
-    <strong>Roadmap</strong>
+  <header class="topbar">
+    <div class="topbar-content">
+      <div>
+        <p class="eyebrow">Roadmap &amp; Maturity</p>
+        <h1>Progression from foundation to optimization</h1>
+        <p class="subhead">A phased plan for scaling controls, automation, and service outcomes.</p>
+      </div>
+      <div class="topbar-actions">
+        <a class="button primary" href="../index.html">Back to home</a>
+        <a class="button secondary" href="../08-roadmap-and-maturity.md">View Markdown</a>
+      </div>
+    </div>
   </header>
-  <div class="container">
-    <nav>
+  <div class="layout">
+    <nav class="sidebar">
       <div class="search">
         <input id="search" type="text" placeholder="Search pages" />
       </div>
+      <div class="nav-title">Documentation</div>
       <div id="nav-links"></div>
     </nav>
-    <main>
-      <div class="card">
-        <h1>Roadmap and Maturity</h1>
-        <p>Phased maturity model with a sample 12-month roadmap.</p>
-        <p><a href="../08-roadmap-and-maturity.md">View Markdown doc</a></p>
-      </div>
+    <main class="content">
+      <section class="card">
+        <h2>Maturity stages</h2>
+        <p>Each phase has clear outcomes, exit criteria, and risks to manage.</p>
+        <div class="pill-group">
+          <span class="pill">Foundation</span>
+          <span class="pill">Standardization</span>
+          <span class="pill">Automation</span>
+          <span class="pill">Optimization</span>
+        </div>
+      </section>
+      <section class="card">
+        <h2>Related sections</h2>
+        <div class="link-list">
+          <a href="kpis.html">Metrics &amp; KPIs</a>
+          <a href="operating-model.html">Operating model</a>
+          <a href="templates.html">Service review template</a>
+        </div>
+      </section>
     </main>
   </div>
   <script src="../assets/app.js"></script>

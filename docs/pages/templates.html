@@ -7,22 +7,46 @@
   <link rel="stylesheet" href="../assets/style.css" />
 </head>
 <body>
-  <header>
-    <strong>Templates</strong>
+  <header class="topbar">
+    <div class="topbar-content">
+      <div>
+        <p class="eyebrow">Templates</p>
+        <h1>Ready-to-use templates</h1>
+        <p class="subhead">Reusable templates for audits, risk tracking, and service reviews.</p>
+      </div>
+      <div class="topbar-actions">
+        <a class="button primary" href="../index.html">Back to home</a>
+        <a class="button secondary" href="../21-templates/README.md">View Markdown</a>
+      </div>
+    </div>
   </header>
-  <div class="container">
-    <nav>
+  <div class="layout">
+    <nav class="sidebar">
       <div class="search">
         <input id="search" type="text" placeholder="Search pages" />
       </div>
+      <div class="nav-title">Documentation</div>
       <div id="nav-links"></div>
     </nav>
-    <main>
-      <div class="card">
-        <h1>Templates</h1>
-        <p>Usable templates for risk, incidents, change requests, and service reviews.</p>
-        <p><a href="../21-templates/README.md">View Markdown template index</a></p>
-      </div>
+    <main class="content">
+      <section class="card">
+        <h2>Template coverage</h2>
+        <p>Each template is designed to align with the Cloud Security Service operating model.</p>
+        <div class="pill-group">
+          <span class="pill">Risk register</span>
+          <span class="pill">Change requests</span>
+          <span class="pill">Postmortems</span>
+          <span class="pill">KPI dashboards</span>
+        </div>
+      </section>
+      <section class="card">
+        <h2>Related sections</h2>
+        <div class="link-list">
+          <a href="runbooks.html">Runbooks</a>
+          <a href="service-definition.html">Service definition</a>
+          <a href="kpis.html">Metrics &amp; KPIs</a>
+        </div>
+      </section>
     </main>
   </div>
   <script src="../assets/app.js"></script>

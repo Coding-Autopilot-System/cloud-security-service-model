@@ -31,7 +31,7 @@ Tone: crisp, enterprise, practical. Avoid buzzword soup. Prefer clear boundaries
 - Use Mermaid (`.mmd` or embedded in MD) for flows.
 - Use YAML for templates/workflows.
 - Use JSON for Azure Policy stubs.
-- Use HTML/CSS for `/site` static docs with a simple nav and search (JS optional).
+- Use HTML/CSS for `/docs` static docs with a simple nav and search (JS optional).
 - Provide consistent naming, cross-links, and an index.
 - Avoid inline newline escapes like `\n` in Markdown lists.
 
@@ -170,24 +170,6 @@ Tagline: “A pragmatic, enterprise Cloud Security service operating model (Azur
       kpi-cadence.md
 
   docs/
-    site/
-      README.md
-      index.html
-      assets/
-        style.css
-        app.js
-      pages/
-        overview.html
-        service-definition.html
-        operating-model.html
-        architecture.html
-        kpis.html
-        roadmap.html
-        runbooks.html
-        templates.html
-        hybrid.html
-  site/
-    README.md
     index.html
     assets/
       style.css
@@ -374,8 +356,8 @@ Create real usable templates:
 - sprint ceremonies md
 - kpi dashboard md
 
-## 9) HTML site (site/*)
-Create a minimal docs site:
+## 9) HTML site (docs/*)
+Create a minimal docs site with modern, enterprise styling:
 - left nav
 - mobile friendly
 - search (simple JS search over page titles or a small index array)
@@ -414,6 +396,7 @@ Keep it stable and not overcomplicated.
 - Prefer explicit tables (RACI, KPIs, cadences, responsibilities).
 - Include “anti-patterns” sections to show maturity (e.g., security as blocker, PDF policies, hero culture).
 - Ensure Markdown content is lint-friendly and free of formatting artifacts.
+- Continuously refine the docs site UX to reflect modern enterprise styling and usability.
 
 ## 13) Execution steps (what you should do now)
 1) Create all files and folders above.

@@ -7,23 +7,45 @@
   <link rel="stylesheet" href="../assets/style.css" />
 </head>
 <body>
-  <header>
-    <strong>Architecture</strong>
+  <header class="topbar">
+    <div class="topbar-content">
+      <div>
+        <p class="eyebrow">Reference Architecture</p>
+        <h1>Architecture &amp; design principles</h1>
+        <p class="subhead">Guidance for security baseline design across Azure and hybrid workloads.</p>
+      </div>
+      <div class="topbar-actions">
+        <a class="button primary" href="../index.html">Back to home</a>
+        <a class="button secondary" href="../04-reference-architecture.md">View Markdown</a>
+      </div>
+    </div>
   </header>
-  <div class="container">
-    <nav>
+  <div class="layout">
+    <nav class="sidebar">
       <div class="search">
         <input id="search" type="text" placeholder="Search pages" />
       </div>
+      <div class="nav-title">Documentation</div>
       <div id="nav-links"></div>
     </nav>
-    <main>
-      <div class="card">
-        <h1>Architecture</h1>
-        <p>Principles and reference architecture for the Cloud Security Service.</p>
-        <p><a href="../03-architecture-principles.md">Architecture principles</a></p>
-        <p><a href="../04-reference-architecture.md">Reference architecture</a></p>
-      </div>
+    <main class="content">
+      <section class="card">
+        <h2>Architecture coverage</h2>
+        <p>Reference architectures, guiding principles, and shared responsibility boundaries.</p>
+        <div class="pill-group">
+          <span class="pill">Landing zones</span>
+          <span class="pill">Logging pipeline</span>
+          <span class="pill">Hybrid connectivity</span>
+        </div>
+      </section>
+      <section class="card">
+        <h2>Related sections</h2>
+        <div class="link-list">
+          <a href="operating-model.html">Operating model</a>
+          <a href="hybrid.html">Hybrid &amp; Azure Local</a>
+          <a href="kpis.html">Metrics &amp; KPIs</a>
+        </div>
+      </section>
     </main>
   </div>
   <script src="../assets/app.js"></script>

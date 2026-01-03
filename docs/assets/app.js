@@ -30,13 +30,18 @@ function resolveHref(targetPath) {
   return `${trimmedBase}/${targetPath}`;
 }
 
+function createNavLink(page) {
+  const link = document.createElement("a");
+  link.href = resolveHref(page.path);
+  link.textContent = page.title;
+  link.classList.add("nav-link");
+  return link;
+}
+
 function buildNav() {
   const nav = document.getElementById("nav-links");
   pageDefinitions.forEach((page) => {
-    const link = document.createElement("a");
-    link.href = resolveHref(page.path);
-    link.textContent = page.title;
-    nav.appendChild(link);
+    nav.appendChild(createNavLink(page));
   });
 }
 
@@ -51,10 +56,7 @@ function setupSearch() {
     const nav = document.getElementById("nav-links");
     nav.innerHTML = "";
     results.forEach((page) => {
-      const link = document.createElement("a");
-      link.href = resolveHref(page.path);
-      link.textContent = page.title;
-      nav.appendChild(link);
+      nav.appendChild(createNavLink(page));
     });
   });
 }
