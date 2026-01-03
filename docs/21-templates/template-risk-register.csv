@@ -1,0 +1,2 @@
+id,title,description,likelihood,impact,score,owner,treatment,due_date,status,last_reviewed,evidence_links
+R-001,Sample risk,Example description,3,4,12,Service Manager,Mitigate,2025-03-31,Open,2025-01-15,link

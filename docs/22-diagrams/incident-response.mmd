@@ -1,0 +1,9 @@
+flowchart LR
+  A[Alert] --> B[Triage]
+  B --> C{Severity}
+  C -->|SEV1/2| D[Contain]
+  C -->|SEV3/4| E[Remediate]
+  D --> F[Eradicate]
+  F --> G[Recover]
+  G --> H[Learn]
+  E --> H
