@@ -1,0 +1,9 @@
+{
+  "name": "Impossible Travel",
+  "properties": {
+    "description": "Detects sign-ins from geographically impossible locations.",
+    "query": "// TODO: add KQL query",
+    "severity": "Medium",
+    "enabled": true
+  }
+}

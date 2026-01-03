@@ -1,0 +1,6 @@
+flowchart LR
+  A[Request] --> B[Assess]
+  B --> C{Approve?}
+  C -->|Yes| D[Compensating Controls]
+  C -->|No| E[Reject]
+  D --> F[Review/Expire]

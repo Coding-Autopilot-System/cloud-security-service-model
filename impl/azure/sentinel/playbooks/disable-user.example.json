@@ -1,0 +1,7 @@
+{
+  "name": "Disable User",
+  "properties": {
+    "description": "Stub playbook to disable a user account.",
+    "workflow": "// TODO: add Logic App definition"
+  }
+}
