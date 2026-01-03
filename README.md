@@ -47,7 +47,8 @@ interfaces, measurable outcomes, and lifecycle management across Azure and hybri
 - Runbooks: [`docs/20-runbooks/README.md`](docs/20-runbooks/README.md)
 - Templates: [`docs/21-templates/README.md`](docs/21-templates/README.md)
 - Diagrams: [`docs/22-diagrams/README.md`](docs/22-diagrams/README.md)
-- Static site: [`docs/index.html`](docs/index.html)
+- Static site: [`docs/site/index.html`](docs/site/index.html)
+- Static site: [`site/index.html`](site/index.html)
 
 ## Service lifecycle (preview)
 ```mermaid
