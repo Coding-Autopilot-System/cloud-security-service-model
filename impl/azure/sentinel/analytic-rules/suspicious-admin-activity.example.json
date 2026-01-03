@@ -1,0 +1,9 @@
+{
+  "name": "Suspicious Admin Activity",
+  "properties": {
+    "description": "Detects unusual privileged actions.",
+    "query": "// TODO: add KQL query",
+    "severity": "High",
+    "enabled": true
+  }
+}
