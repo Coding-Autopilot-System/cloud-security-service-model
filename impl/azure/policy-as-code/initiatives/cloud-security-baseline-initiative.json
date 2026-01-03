@@ -1,0 +1,33 @@
+{
+  "name": "cloud-security-baseline-initiative",
+  "properties": {
+    "displayName": "Cloud Security Baseline",
+    "description": "Baseline controls for encryption, diagnostics, and network exposure.",
+    "metadata": {
+      "category": "Security"
+    },
+    "parameters": {},
+    "policyDefinitions": [
+      {
+        "policyDefinitionReferenceId": "encryption-required",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/encryption-required-stub",
+        "parameters": {}
+      },
+      {
+        "policyDefinitionReferenceId": "no-public-ip",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/no-public-ip-stub",
+        "parameters": {}
+      },
+      {
+        "policyDefinitionReferenceId": "diagnostics-enabled",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/diagnostics-enabled-stub",
+        "parameters": {}
+      },
+      {
+        "policyDefinitionReferenceId": "required-tags",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/required-tags-stub",
+        "parameters": {}
+      }
+    ]
+  }
+}

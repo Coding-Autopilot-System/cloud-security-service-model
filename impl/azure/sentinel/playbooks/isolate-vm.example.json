@@ -1,0 +1,7 @@
+{
+  "name": "Isolate VM",
+  "properties": {
+    "description": "Stub playbook to isolate a VM.",
+    "workflow": "// TODO: add Logic App definition"
+  }
+}

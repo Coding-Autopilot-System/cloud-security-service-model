@@ -1,0 +1,9 @@
+{
+  "name": "subscription-baseline-assignment",
+  "properties": {
+    "displayName": "Subscription Baseline Assignment",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/iso27001-aligned-initiative",
+    "scope": "/subscriptions/00000000-0000-0000-0000-000000000000",
+    "parameters": {}
+  }
+}

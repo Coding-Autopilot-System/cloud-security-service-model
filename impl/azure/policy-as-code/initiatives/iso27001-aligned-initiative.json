@@ -1,0 +1,28 @@
+{
+  "name": "iso27001-aligned-initiative",
+  "properties": {
+    "displayName": "ISO 27001 Aligned Security Baseline",
+    "description": "High-level alignment to ISO 27001 control intent (summary only).",
+    "metadata": {
+      "category": "Security"
+    },
+    "parameters": {},
+    "policyDefinitions": [
+      {
+        "policyDefinitionReferenceId": "access-control",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/access-control-stub",
+        "parameters": {}
+      },
+      {
+        "policyDefinitionReferenceId": "logging-monitoring",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/logging-monitoring-stub",
+        "parameters": {}
+      },
+      {
+        "policyDefinitionReferenceId": "change-management",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/change-management-stub",
+        "parameters": {}
+      }
+    ]
+  }
+}

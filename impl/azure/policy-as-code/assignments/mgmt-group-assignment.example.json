@@ -1,0 +1,9 @@
+{
+  "name": "mgmt-group-baseline-assignment",
+  "properties": {
+    "displayName": "Management Group Baseline Assignment",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/cloud-security-baseline-initiative",
+    "scope": "/providers/Microsoft.Management/managementGroups/contoso-mg",
+    "parameters": {}
+  }
+}

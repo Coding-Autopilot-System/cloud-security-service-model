@@ -1,0 +1,6 @@
+flowchart LR
+  A[Azure Resources] --> B[Log Analytics]
+  C[Arc-enabled Servers] --> B
+  D[Azure Local] --> E[Log Forwarder]
+  E --> B
+  B --> F[SIEM]

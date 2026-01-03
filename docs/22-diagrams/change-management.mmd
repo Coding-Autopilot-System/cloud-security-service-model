@@ -1,0 +1,10 @@
+flowchart LR
+  A[Change Request] --> B[Risk Assessment]
+  B --> C{Type}
+  C -->|Standard| D[Auto-Approve]
+  C -->|Normal| E[Approve]
+  C -->|Emergency| F[Expedite]
+  D --> G[Implement]
+  E --> G
+  F --> G
+  G --> H[Verify & Close]
