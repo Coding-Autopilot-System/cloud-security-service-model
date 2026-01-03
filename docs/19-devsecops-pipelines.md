@@ -37,6 +37,16 @@ steps:
     run: ./tools/policy-validate.sh
 ```
 
+## Policy-as-code loop (visual)
+```mermaid
+flowchart LR
+  A[Author] --> B[Test]
+  B --> C[Deploy]
+  C --> D[Monitor Drift]
+  D --> E[Fix]
+  E --> A
+```
+
 ## Diagram
 Policy-as-code lifecycle: [`22-diagrams/policy-as-code-loop.mmd`](22-diagrams/policy-as-code-loop.mmd)
 

@@ -17,6 +17,18 @@ logging/monitoring services. It supports Azure and hybrid assets via Azure Arc.
 3. Logs are forwarded to SIEM for detection and response.
 4. Evidence is stored and mapped to controls.
 
+## Shared responsibility (visual)
+```mermaid
+flowchart LR
+  A[Cloud Provider] --> B[Physical Security]
+  A --> C[Hypervisor]
+  A --> D[Core Services]
+  E[Customer] --> F[Identity]
+  E --> G[Data]
+  E --> H[Configuration]
+  E --> I[Applications]
+```
+
 ## Diagram
 Shared responsibility overview: [`22-diagrams/shared-responsibility.mmd`](22-diagrams/shared-responsibility.mmd)
 

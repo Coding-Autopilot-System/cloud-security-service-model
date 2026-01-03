@@ -30,6 +30,17 @@ predictability.
 - Risk & audit readiness
 - Hybrid posture management
 
+## Service lifecycle (visual)
+```mermaid
+flowchart LR
+  A[Discover Demand] --> B[Define Service]
+  B --> C[Design Controls]
+  C --> D[Build Controls as Code]
+  D --> E[Operate & Monitor]
+  E --> F[Measure & Improve]
+  F --> B
+```
+
 ## Documentation index
 - [`01-service-definition.md`](01-service-definition.md)
 - [`02-service-catalog.md`](02-service-catalog.md)

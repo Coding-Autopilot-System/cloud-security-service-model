@@ -13,6 +13,16 @@
 ## Hybrid logging
 Azure Arc-enabled servers forward logs to centralized SIEM with consistent tags and retention.
 
+## Hybrid logging architecture (visual)
+```mermaid
+flowchart LR
+  A[Azure Resources] --> B[Log Analytics]
+  C[Arc-enabled Servers] --> B
+  D[Azure Local] --> E[Log Forwarder]
+  E --> B
+  B --> F[SIEM]
+```
+
 ## Diagram
 Hybrid logging architecture: [`22-diagrams/hybrid-logging-architecture.mmd`](22-diagrams/hybrid-logging-architecture.mmd)
 

@@ -24,6 +24,7 @@ Tone: crisp, enterprise, practical. Avoid buzzword soup. Prefer clear boundaries
 - Include runbooks, SLAs/SLOs, incident response playbooks, change management, exception handling, risk acceptance.
 - Include a CI workflow that checks markdown, mermaid syntax, and link validity (best-effort).
 - Everything must be public-safe: no secrets, no internal URLs, no real tenant IDs.
+- Every major document must be complete, non-placeholder, and cross-linked to related docs and diagrams.
 
 ## 1) Output format requirements
 - Use Markdown for documentation (`docs/`).
@@ -32,6 +33,7 @@ Tone: crisp, enterprise, practical. Avoid buzzword soup. Prefer clear boundaries
 - Use JSON for Azure Policy stubs.
 - Use HTML/CSS for `/site` static docs with a simple nav and search (JS optional).
 - Provide consistent naming, cross-links, and an index.
+- Avoid inline newline escapes like `\n` in Markdown lists.
 
 ## 2) Repo name + branding
 Repo title: `cloud-security-service-model`
@@ -167,6 +169,23 @@ Tagline: “A pragmatic, enterprise Cloud Security service operating model (Azur
       okrs.md
       kpi-cadence.md
 
+  docs/
+    site/
+      README.md
+      index.html
+      assets/
+        style.css
+        app.js
+      pages/
+        overview.html
+        service-definition.html
+        operating-model.html
+        architecture.html
+        kpis.html
+        roadmap.html
+        runbooks.html
+        templates.html
+        hybrid.html
   site/
     README.md
     index.html
@@ -238,6 +257,7 @@ Tagline: “A pragmatic, enterprise Cloud Security service operating model (Azur
   - privileged access exposure (PIM activations, standing admins)
   - misconfiguration trend rate
   - backup restore test success rate
+- Add a brief SLA/SLO section with targets for core service capabilities.
 - Include a sample dashboard mock (markdown table) and a “metrics anti-patterns” section
 
 ### docs/08-roadmap-and-maturity.md
@@ -381,6 +401,7 @@ Keep it stable and not overcomplicated.
 - docs index in README
 - Each doc includes “Related docs” at bottom
 - Diagrams referenced from relevant docs
+- Each diagram should be referenced by at least one doc and the related doc should mention the diagram.
 
 ## 12) Quality bar
 - No fluff. Every section must answer: “what is it, who owns it, how does it work, how is success measured, how does it improve”.
@@ -392,6 +413,7 @@ Keep it stable and not overcomplicated.
   - “Evidence” (audit artifacts)
 - Prefer explicit tables (RACI, KPIs, cadences, responsibilities).
 - Include “anti-patterns” sections to show maturity (e.g., security as blocker, PDF policies, hero culture).
+- Ensure Markdown content is lint-friendly and free of formatting artifacts.
 
 ## 13) Execution steps (what you should do now)
 1) Create all files and folders above.

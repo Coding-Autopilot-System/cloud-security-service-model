@@ -8,6 +8,15 @@ The Cloud Security Service operates in a continuous lifecycle:
 - **Run:** monitoring, incident response, compliance reporting.
 - **Improve:** retrospectives, KPI review, maturity evolution.
 
+## Operating model (visual)
+```mermaid
+flowchart LR
+  A[Plan] --> B[Build]
+  B --> C[Run]
+  C --> D[Improve]
+  D --> A
+```
+
 ## Diagram
 See the lifecycle model diagram: [`22-diagrams/security-operating-model.mmd`](22-diagrams/security-operating-model.mmd)
 
