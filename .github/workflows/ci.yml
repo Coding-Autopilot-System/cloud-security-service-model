@@ -25,7 +25,7 @@ jobs:
 
       - name: Verify Mermaid blocks
         run: |
-          rg "```mermaid" docs README.md
+          rg '```mermaid' docs README.md
 
       - name: Validate JSON formatting
         run: |
