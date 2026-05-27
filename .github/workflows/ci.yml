@@ -25,10 +25,10 @@ jobs:
 
       - name: Verify Mermaid blocks
         run: |
-          rg '```mermaid' docs README.md
+          grep -rl '```mermaid' docs README.md
 
       - name: Validate JSON formatting
         run: |
-          for file in $(rg --files -g '*.json' impl); do
-            jq empty "$file"
+          find impl -name '*.json' 2>/dev/null | while read f; do
+            jq empty "$f"
           done
