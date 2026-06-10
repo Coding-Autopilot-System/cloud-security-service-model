@@ -41,3 +41,9 @@ jobs:
         run: |
           find impl -name '*.json' -print0 |
             xargs -0 -n1 jq empty
+
+      - name: Install Bicep CLI
+        run: az bicep install
+
+      - name: Validate repository contracts
+        run: bash scripts/validate-repository.sh
