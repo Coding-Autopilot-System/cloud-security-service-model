@@ -55,6 +55,22 @@ while IFS= read -r -d '' assignment; do
     report_failure "$assignment must default to audit-only DoNotEnforce rollout."
   fi
 done < <(find impl/azure/policy-as-code/assignments -type f -name '*.json' -print0)
+arc_log="$(mktemp)"
+if ! bash impl/hybrid/azure-arc/onboarding/arc-onboard.sh rg-security northeurope 00000000-0000-0000-0000-000000000000 --log-file "$arc_log" >/dev/null; then
+  report_failure "Azure Arc Bash dry-run contract failed."
+fi
+if bash impl/hybrid/azure-arc/onboarding/arc-onboard.sh rg-security northeurope 00000000-0000-0000-0000-000000000000 --execute >/dev/null 2>&1; then
+  report_failure "Azure Arc Bash reference must reject execution."
+fi
+if ! grep -q '"mode":"dry-run"' "$arc_log"; then
+  report_failure "Azure Arc Bash dry run did not produce structured evidence."
+fi
+rm -f "$arc_log"
+
+if ! grep -q "\[switch\]\$Execute" impl/hybrid/azure-arc/onboarding/arc-onboard.ps1 ||
+   ! grep -q "ConvertTo-Json -Compress" impl/hybrid/azure-arc/onboarding/arc-onboard.ps1; then
+  report_failure "Azure Arc PowerShell reference must expose dry-run evidence and fail-closed execution."
+fi
 if (( failures > 0 )); then
   printf 'Repository validation failed with %d error(s).\n' "$failures" >&2
   exit 1
