@@ -46,6 +46,15 @@ else
   report_failure "Azure CLI with Bicep is required for repository validation."
 fi
 
+if grep -R -n --include='*.json' -- '-stub"' impl/azure/policy-as-code; then
+  report_failure "Policy examples must not reference fictional stub identifiers."
+fi
+
+while IFS= read -r -d '' assignment; do
+  if ! grep -q '"enforcementMode": "DoNotEnforce"' "$assignment"; then
+    report_failure "$assignment must default to audit-only DoNotEnforce rollout."
+  fi
+done < <(find impl/azure/policy-as-code/assignments -type f -name '*.json' -print0)
 if (( failures > 0 )); then
   printf 'Repository validation failed with %d error(s).\n' "$failures" >&2
   exit 1

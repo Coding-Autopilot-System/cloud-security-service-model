@@ -1,9 +1,22 @@
 {
-  "name": "subscription-baseline-assignment",
+  "name": "iso27001-audit-assignment",
   "properties": {
-    "displayName": "Subscription Baseline Assignment",
-    "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/iso27001-aligned-initiative",
+    "displayName": "ISO 27001:2013 built-in initiative - audit rollout",
+    "description": "Reference assignment only; it does not establish certification or compliance.",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/89c6cddc-1c73-4ac1-b19c-54d1a15a42f2",
     "scope": "/subscriptions/00000000-0000-0000-0000-000000000000",
-    "parameters": {}
+    "enforcementMode": "DoNotEnforce",
+    "metadata": {
+      "assignedBy": "cloud-security-platform-team",
+      "rolloutStage": "audit",
+      "changeTicket": "replace-with-approved-change-id",
+      "reviewAfterDays": 30
+    },
+    "parameters": {},
+    "nonComplianceMessages": [
+      {
+        "message": "Treat this result as control evidence input, not proof of ISO 27001 certification."
+      }
+    ]
   }
 }

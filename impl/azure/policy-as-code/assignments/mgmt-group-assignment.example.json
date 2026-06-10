@@ -1,9 +1,22 @@
 {
-  "name": "mgmt-group-baseline-assignment",
+  "name": "mcsb-audit-assignment",
   "properties": {
-    "displayName": "Management Group Baseline Assignment",
-    "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/cloud-security-baseline-initiative",
-    "scope": "/providers/Microsoft.Management/managementGroups/contoso-mg",
-    "parameters": {}
+    "displayName": "Microsoft cloud security benchmark - audit rollout",
+    "description": "Reference assignment for the Microsoft cloud security benchmark built-in initiative.",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
+    "scope": "/providers/Microsoft.Management/managementGroups/replace-with-management-group-id",
+    "enforcementMode": "DoNotEnforce",
+    "metadata": {
+      "assignedBy": "cloud-security-platform-team",
+      "rolloutStage": "audit",
+      "changeTicket": "replace-with-approved-change-id",
+      "reviewAfterDays": 30
+    },
+    "parameters": {},
+    "nonComplianceMessages": [
+      {
+        "message": "Review the benchmark finding with the cloud security platform team before remediation."
+      }
+    ]
   }
 }
