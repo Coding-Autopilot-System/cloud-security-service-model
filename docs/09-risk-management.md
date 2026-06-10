@@ -25,3 +25,4 @@
 ## Related docs
 - Audit readiness: [`10-audit-readiness.md`](10-audit-readiness.md)
 - Exception handling: [`13-exception-handling.md`](13-exception-handling.md)
+- Threat model: [`23-threat-model.md`](23-threat-model.md)

@@ -35,3 +35,4 @@ Shared responsibility overview: [`22-diagrams/shared-responsibility.mmd`](22-dia
 ## Related docs
 - Architecture principles: [`03-architecture-principles.md`](03-architecture-principles.md)
 - Hybrid/Azure Local: [`18-hybrid-azure-local.md`](18-hybrid-azure-local.md)
+- Threat model: [`23-threat-model.md`](23-threat-model.md)
