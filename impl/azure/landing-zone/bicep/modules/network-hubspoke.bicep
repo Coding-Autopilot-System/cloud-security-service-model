@@ -1,4 +1,51 @@
 param location string
+param name string
 
-// TODO: Define hub VNet, spokes, firewall placeholder, private DNS zones.
-output networkBaseline string = 'network-hubspoke-stub'
+resource nsg 'Microsoft.Network/networkSecurityGroups@2024-05-01' = {
+  name: '${name}-nsg'
+  location: location
+  properties: {
+    securityRules: [
+      {
+        name: 'DenyInternetInbound'
+        properties: {
+          priority: 4096
+          access: 'Deny'
+          direction: 'Inbound'
+          protocol: '*'
+          sourcePortRange: '*'
+          destinationPortRange: '*'
+          sourceAddressPrefix: 'Internet'
+          destinationAddressPrefix: '*'
+        }
+      }
+    ]
+  }
+}
+
+resource virtualNetwork 'Microsoft.Network/virtualNetworks@2024-05-01' = {
+  name: name
+  location: location
+  properties: {
+    addressSpace: {
+      addressPrefixes: [
+        '10.20.0.0/16'
+      ]
+    }
+    subnets: [
+      {
+        name: 'workload'
+        properties: {
+          addressPrefix: '10.20.1.0/24'
+          networkSecurityGroup: {
+            id: nsg.id
+          }
+          privateEndpointNetworkPolicies: 'Disabled'
+        }
+      }
+    ]
+  }
+}
+
+output resourceId string = virtualNetwork.id
+output workloadSubnetId string = virtualNetwork.properties.subnets[0].id

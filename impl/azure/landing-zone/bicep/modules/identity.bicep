@@ -1,5 +1,14 @@
 param location string
+param name string
 
-// TODO: Define identity resources (managed identities, role assignments)
-// Notes: Use PIM for privileged roles and enforce least privilege.
-output identityBaseline string = 'identity-baseline-stub'
+resource identity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' = {
+  name: name
+  location: location
+  tags: {
+    purpose: 'cloud-security-service-model'
+    privilegeModel: 'no-default-role-assignments'
+  }
+}
+
+output resourceId string = identity.id
+output principalId string = identity.properties.principalId
