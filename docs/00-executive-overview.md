@@ -17,6 +17,20 @@ predictability.
 - Controls as Code are deployed, tested, and monitored for drift.
 - Service outcomes are reviewed on a regular cadence and improved.
 
+## Why this matters beyond security alone
+This repository is still a Cloud Security Service model first. Its broader portfolio value comes from showing how an
+enterprise shared service is defined end-to-end: strategy, service boundaries, governance, architecture principles,
+controls-as-code, operating cadence, evidence, and measurable outcomes.
+
+That makes it directly relevant to adjacent platform and AI initiatives that depend on the same foundations:
+- identity and privileged access controls
+- policy guardrails and exception handling
+- logging, detection, and audit evidence
+- release discipline for regulated shared services
+
+The point is not that cloud security becomes an AI platform. The point is that strong AI and platform services usually
+require a security operating model like this underneath them.
+
 ## Assumptions
 - The organization operates Azure and maintains hybrid/on-prem environments with Azure Arc.
 - Centralized logging exists or is feasible via SIEM (e.g., Microsoft Sentinel).
@@ -71,6 +85,14 @@ flowchart LR
 - **CISSP domains**: Security & Risk Management, Asset Security, Security Engineering, IAM, Security Assessment,
   Security Operations, Software Development Security.
 - **NIST-like IR lifecycle**: prepare, detect, contain, eradicate, recover, learn.
+
+## Portfolio reading guide
+If you are reviewing this repository as part of a wider architecture portfolio, read it in this order:
+
+1. [`01-service-definition.md`](01-service-definition.md) for the service contract and organizational interfaces.
+2. [`05-operating-model.md`](05-operating-model.md) for the delivery and governance mechanics.
+3. [`04-reference-architecture.md`](04-reference-architecture.md) and [`19-devsecops-pipelines.md`](19-devsecops-pipelines.md) for implementation posture.
+4. [`10-audit-readiness.md`](10-audit-readiness.md) and [`11-incident-response.md`](11-incident-response.md) for evidence and operational rigor.
 
 ## Related docs
 - Service definition: [`01-service-definition.md`](01-service-definition.md)
