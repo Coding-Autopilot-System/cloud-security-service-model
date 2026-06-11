@@ -1,9 +1,51 @@
 {
-  "name": "Suspicious Admin Activity",
+  "name": "Suspicious Admin Activity Reference",
   "properties": {
-    "description": "Detects unusual privileged actions.",
-    "query": "// TODO: add KQL query",
+    "description": "Flags bursts of successful high-impact directory administration operations by one actor.",
+    "query": "let lookback = 1h;\nlet operationThreshold = 5;\nAuditLogs\n| where TimeGenerated > ago(lookback)\n| where Result =~ 'success'\n| where OperationName in~ ('Add member to role', 'Add eligible member to role', 'Update conditional access policy', 'Delete conditional access policy', 'Reset user password')\n| extend Actor=tostring(InitiatedBy.user.userPrincipalName), ActorIp=tostring(InitiatedBy.user.ipAddress)\n| where isnotempty(Actor)\n| summarize OperationCount=count(), Operations=make_set(OperationName, 20), Targets=make_set(tostring(TargetResources[0].displayName), 20) by Actor, ActorIp, bin(TimeGenerated, 15m)\n| where OperationCount >= operationThreshold",
     "severity": "High",
-    "enabled": true
+    "enabled": false,
+    "queryFrequency": "PT15M",
+    "queryPeriod": "PT1H",
+    "triggerOperator": "GreaterThan",
+    "triggerThreshold": 0,
+    "suppressionDuration": "PT1H",
+    "suppressionEnabled": true,
+    "tactics": [
+      "Persistence",
+      "PrivilegeEscalation",
+      "DefenseEvasion"
+    ],
+    "techniques": [
+      "T1098",
+      "T1078"
+    ],
+    "entityMappings": [
+      {
+        "entityType": "Account",
+        "fieldMappings": [
+          {
+            "identifier": "FullName",
+            "columnName": "Actor"
+          }
+        ]
+      },
+      {
+        "entityType": "IP",
+        "fieldMappings": [
+          {
+            "identifier": "Address",
+            "columnName": "ActorIp"
+          }
+        ]
+      }
+    ],
+    "tuning": {
+      "owner": "security-operations",
+      "validationMode": "test-workspace-first",
+      "reviewCadence": "monthly",
+      "knownLimitations": "Approved bulk administration and emergency response can create false positives.",
+      "requiredExclusions": "Approved automation identities and emergency changes require time-bound exclusions."
+    }
   }
 }

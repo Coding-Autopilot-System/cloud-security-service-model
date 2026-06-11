@@ -71,6 +71,17 @@ if ! grep -q "\[switch\]\$Execute" impl/hybrid/azure-arc/onboarding/arc-onboard.
    ! grep -q "ConvertTo-Json -Compress" impl/hybrid/azure-arc/onboarding/arc-onboard.ps1; then
   report_failure "Azure Arc PowerShell reference must expose dry-run evidence and fail-closed execution."
 fi
+if grep -R -n --include='*.json' 'TODO: add KQL query' impl/azure/sentinel/analytic-rules; then
+  report_failure "Sentinel analytic rules must contain bounded testable KQL."
+fi
+
+while IFS= read -r -d '' rule; do
+  for field in queryFrequency queryPeriod tuning; do
+    if ! grep -q "\"$field\"" "$rule"; then
+      report_failure "$rule is missing required Sentinel tuning field: $field."
+    fi
+  done
+done < <(find impl/azure/sentinel/analytic-rules -type f -name '*.json' -print0)
 if (( failures > 0 )); then
   printf 'Repository validation failed with %d error(s).\n' "$failures" >&2
   exit 1
