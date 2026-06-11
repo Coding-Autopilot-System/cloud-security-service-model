@@ -1,31 +1,24 @@
 {
-  "name": "cloud-security-baseline-initiative",
+  "name": "cloud-security-baseline-reference",
   "properties": {
-    "displayName": "Cloud Security Baseline",
-    "description": "Baseline controls for encryption, diagnostics, and network exposure.",
+    "displayName": "Cloud security baseline reference",
+    "description": "Small reference initiative using verifiable Azure built-in policy definitions.",
     "metadata": {
-      "category": "Security"
+      "category": "Security",
+      "version": "1.0.0",
+      "rolloutDefault": "DoNotEnforce",
+      "owner": "cloud-security-platform-team"
     },
     "parameters": {},
     "policyDefinitions": [
       {
-        "policyDefinitionReferenceId": "encryption-required",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/encryption-required-stub",
+        "policyDefinitionReferenceId": "secure-transfer-storage",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/404c3081-a854-4457-ae30-26a93ef643f9",
         "parameters": {}
       },
       {
-        "policyDefinitionReferenceId": "no-public-ip",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/no-public-ip-stub",
-        "parameters": {}
-      },
-      {
-        "policyDefinitionReferenceId": "diagnostics-enabled",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/diagnostics-enabled-stub",
-        "parameters": {}
-      },
-      {
-        "policyDefinitionReferenceId": "required-tags",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/required-tags-stub",
+        "policyDefinitionReferenceId": "managed-disks-vm",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/06a78e20-9358-41c9-923c-fb736d382a4d",
         "parameters": {}
       }
     ]

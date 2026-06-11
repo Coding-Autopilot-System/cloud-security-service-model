@@ -80,6 +80,7 @@ pretending to be those services.
 - Runbooks: [`docs/20-runbooks/README.md`](docs/20-runbooks/README.md)
 - Templates: [`docs/21-templates/README.md`](docs/21-templates/README.md)
 - Diagrams: [`docs/22-diagrams/README.md`](docs/22-diagrams/README.md)
+- Threat model: [`docs/23-threat-model.md`](docs/23-threat-model.md)
 - Static site: [`docs/index.html`](docs/index.html)
 - [Wiki](https://github.com/Coding-Autopilot-System/cloud-security-service-model/wiki) - overview, service definition, architecture, metrics & compliance
 

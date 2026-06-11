@@ -1,9 +1,40 @@
 {
-  "name": "Impossible Travel",
+  "name": "Impossible Travel Reference",
   "properties": {
-    "description": "Detects sign-ins from geographically impossible locations.",
-    "query": "// TODO: add KQL query",
+    "description": "Flags successful sign-ins for one identity whose calculated travel speed exceeds the review threshold.",
+    "query": "let lookback = 1h;\nlet maxTravelSpeedKph = 900.0;\nSigninLogs\n| where TimeGenerated > ago(lookback)\n| where ResultType == 0\n| where isnotempty(LocationDetails.geoCoordinates.latitude) and isnotempty(LocationDetails.geoCoordinates.longitude)\n| project UserPrincipalName, TimeGenerated, IPAddress, Country=tostring(LocationDetails.countryOrRegion), Latitude=todouble(LocationDetails.geoCoordinates.latitude), Longitude=todouble(LocationDetails.geoCoordinates.longitude)\n| sort by UserPrincipalName asc, TimeGenerated asc\n| serialize\n| extend PreviousUser=prev(UserPrincipalName), PreviousTime=prev(TimeGenerated), PreviousCountry=prev(Country), PreviousLatitude=prev(Latitude), PreviousLongitude=prev(Longitude)\n| where UserPrincipalName == PreviousUser and TimeGenerated > PreviousTime and Country != PreviousCountry\n| extend DistanceKm=geo_distance_2points(Longitude, Latitude, PreviousLongitude, PreviousLatitude) / 1000.0, Hours=datetime_diff('second', TimeGenerated, PreviousTime) / 3600.0\n| extend SpeedKph=DistanceKm / Hours\n| where SpeedKph > maxTravelSpeedKph\n| project TimeGenerated, UserPrincipalName, IPAddress, Country, PreviousCountry, DistanceKm, Hours, SpeedKph",
     "severity": "Medium",
-    "enabled": true
+    "enabled": false,
+    "queryFrequency": "PT15M",
+    "queryPeriod": "PT1H",
+    "triggerOperator": "GreaterThan",
+    "triggerThreshold": 0,
+    "suppressionDuration": "PT1H",
+    "suppressionEnabled": true,
+    "tactics": [
+      "InitialAccess",
+      "CredentialAccess"
+    ],
+    "techniques": [
+      "T1078"
+    ],
+    "entityMappings": [
+      {
+        "entityType": "Account",
+        "fieldMappings": [
+          {
+            "identifier": "FullName",
+            "columnName": "UserPrincipalName"
+          }
+        ]
+      }
+    ],
+    "tuning": {
+      "owner": "security-operations",
+      "validationMode": "test-workspace-first",
+      "reviewCadence": "monthly",
+      "knownLimitations": "VPN, mobile carrier, and trusted egress changes can create false positives.",
+      "requiredExclusions": "Approved VPN and trusted egress ranges must be reviewed before enabling."
+    }
   }
 }
