@@ -1,5 +1,8 @@
 # cloud-security-service-model
 
+[![CI](https://github.com/Coding-Autopilot-System/cloud-security-service-model/actions/workflows/ci.yml/badge.svg)](https://github.com/Coding-Autopilot-System/cloud-security-service-model/actions/workflows/ci.yml) [![CodeQL](https://github.com/Coding-Autopilot-System/cloud-security-service-model/actions/workflows/codeql.yml/badge.svg)](https://github.com/Coding-Autopilot-System/cloud-security-service-model/actions/workflows/codeql.yml)
+
+
 [![CI](https://github.com/Coding-Autopilot-System/cloud-security-service-model/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Coding-Autopilot-System/cloud-security-service-model/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
