@@ -27,6 +27,7 @@
 **Risks:** complacency, reduced focus on hygiene.
 
 ## Sample 12-month roadmap
+
 | Quarter | Focus | Key Deliverables |
 | --- | --- | --- |
 | Q1 | Foundation | Landing zone baseline, policy-as-code MVP, SIEM onboarding |

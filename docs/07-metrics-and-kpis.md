@@ -1,6 +1,7 @@
 # Metrics and KPIs
 
 ## KPI catalog
+
 | KPI | Definition | Formula | Data Sources | Target | Owner | Cadence |
 | --- | --- | --- | --- | --- | --- | --- |
 | Policy compliance % | Percentage of resources compliant with baseline policies | Compliant resources / total in scope | Policy compliance reports | ≥ 95% | Service Manager | Weekly |
@@ -12,6 +13,7 @@
 | Backup restore test success rate | Successful restore tests | Successful tests / total tests | Backup reports | ≥ 95% | Platform Ops | Quarterly |
 
 ## SLA/SLO targets (service-level)
+
 | Service area | SLA/SLO | Definition | Target | Owner |
 | --- | --- | --- | --- | --- |
 | Incident response | SLO | SEV1 acknowledgment time | ≤ 15 minutes | Incident Commander |
@@ -21,6 +23,7 @@
 | Exception handling | SLA | Exception review turnaround | ≤ 10 business days | Risk Owner |
 
 ## Sample dashboard (mock)
+
 | Metric | Current | Target | Status |
 | --- | --- | --- | --- |
 | Policy compliance % | 96.4% | ≥ 95% | On track |

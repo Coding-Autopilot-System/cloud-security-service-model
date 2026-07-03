@@ -1,6 +1,8 @@
 # Cloud Security Service Model
 
-Welcome to the Cloud Security Service Model documentation. This repository defines an enterprise-grade cloud security operating model for Azure and hybrid environments. It outlines service scope, governance, controls-as-code, metrics, and measurable outcomes.
+Welcome to the Cloud Security Service Model documentation. This repository defines an
+enterprise-grade cloud security operating model for Azure and hybrid environments.
+It outlines service scope, governance, controls-as-code, metrics, and measurable outcomes.
 
 ## Getting Started for Developers
 
