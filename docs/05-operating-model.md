@@ -25,6 +25,7 @@ See the lifecycle model diagram: [`22-diagrams/security-operating-model.mmd`](22
 repeatable controls, and shared accountability.
 
 ## Ceremonies and cadence
+
 | Ceremony | Cadence | Owner | Outputs |
 | --- | --- | --- | --- |
 | Weekly ops review | Weekly | Service Manager | KPI deltas, top risks, open incidents |

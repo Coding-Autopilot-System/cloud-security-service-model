@@ -4,6 +4,7 @@
 Prepare → Detect → Contain → Eradicate → Recover → Learn
 
 ## Severity model
+
 | Severity | Description | Example |
 | --- | --- | --- |
 | SEV1 | Critical impact to multiple services or regulatory exposure | Widespread credential compromise |

@@ -1,6 +1,7 @@
 # Service Catalog
 
 ## Core services
+
 | Service | Description | Owner | Key Outputs |
 | --- | --- | --- | --- |
 | Policy-as-Code | Baseline policies and initiatives for Azure and hybrid | Cloud Security Service | Policy initiatives, assignments, compliance reports |
@@ -10,6 +11,7 @@
 | Risk & Audit | Evidence and risk reporting | Service Manager | Risk register, audit evidence packs |
 
 ## Optional services
+
 | Service | Description | Trigger |
 | --- | --- | --- |
 | Configuration Review | Targeted posture review for workloads | Quarterly reviews or upon request |
