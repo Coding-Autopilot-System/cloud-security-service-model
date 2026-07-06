@@ -1,6 +1,6 @@
 param location string
 
-resource allowedLocations 'Microsoft.Authorization/policyAssignments@2024-04-01' = {
+resource allowedLocations 'Microsoft.Authorization/policyAssignments@2025-01-01' = {
   name: guid(resourceGroup().id, 'allowed-locations')
   properties: {
     displayName: 'Allowed locations for the reference resource group'

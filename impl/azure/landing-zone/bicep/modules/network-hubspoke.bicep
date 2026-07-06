@@ -1,7 +1,7 @@
 param location string
 param name string
 
-resource nsg 'Microsoft.Network/networkSecurityGroups@2024-05-01' = {
+resource nsg 'Microsoft.Network/networkSecurityGroups@2024-10-01' = {
   name: '${name}-nsg'
   location: location
   properties: {
@@ -23,7 +23,7 @@ resource nsg 'Microsoft.Network/networkSecurityGroups@2024-05-01' = {
   }
 }
 
-resource virtualNetwork 'Microsoft.Network/virtualNetworks@2024-05-01' = {
+resource virtualNetwork 'Microsoft.Network/virtualNetworks@2024-10-01' = {
   name: name
   location: location
   properties: {
