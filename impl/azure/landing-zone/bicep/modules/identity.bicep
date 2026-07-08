@@ -1,7 +1,7 @@
 param location string
 param name string
 
-resource identity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' = {
+resource identity 'Microsoft.ManagedIdentity/userAssignedIdentities@2024-11-30' = {
   name: name
   location: location
   tags: {

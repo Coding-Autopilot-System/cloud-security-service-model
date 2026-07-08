@@ -1,7 +1,7 @@
 param location string
 param name string
 
-resource workspace 'Microsoft.OperationalInsights/workspaces@2023-09-01' = {
+resource workspace 'Microsoft.OperationalInsights/workspaces@2025-02-01' = {
   name: name
   location: location
   properties: {
