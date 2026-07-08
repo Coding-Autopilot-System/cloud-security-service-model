@@ -85,6 +85,13 @@ pretending to be those services.
 - Diagrams: [`docs/22-diagrams/README.md`](docs/22-diagrams/README.md)
 - Threat model: [`docs/23-threat-model.md`](docs/23-threat-model.md)
 - Static site: [`docs/index.html`](docs/index.html)
+- Policy enforcement mode: the landing-zone `allowed-locations` policy assignment
+  ([`impl/azure/landing-zone/bicep/modules/policy-assignments.bicep`](impl/azure/landing-zone/bicep/modules/policy-assignments.bicep))
+  is set to `enforcementMode: 'DoNotEnforce'` (audit-only rollout state). A formal ADR recording
+  this decision is in progress (PR #13, `fix(bicep): pin API versions and record DoNotEnforce ADR`);
+  it is not yet present in `docs/adr/` on `main`.
+- Docs-as-code wiki (Home, Architecture, Operations, Decisions):
+  [`docs/wiki/`](docs/wiki/Home.md)
 - [Wiki](https://github.com/Coding-Autopilot-System/cloud-security-service-model/wiki) - overview, service definition, architecture, metrics & compliance
 
 ## Service lifecycle
@@ -130,3 +137,5 @@ The repository includes:
 ## License
 
 See [`LICENSE`](LICENSE).
+
+<!-- docs-verified: ca23302fb25134bdd086455c91019ffea272a8b1 2026-07-08 -->
