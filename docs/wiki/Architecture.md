@@ -26,7 +26,15 @@ graph TD
     CloudSecurityService --> OperationsAndGovernance
 ```
 
-<!-- codex:generate-image prompt="A layered security operations center: consumer teams on an outer ring hand requests inward through a glowing policy-engine core, which routes to identity, threat detection, and SIEM stations, all feeding an audit ledger at the center; isometric, enterprise blue/graphite palette" style="isometric, enterprise, clean" replaces="mermaid-above" -->
+<!--
+codex:generate-image
+prompt="A layered security operations center: consumer teams on an outer ring hand requests
+inward through a glowing policy-engine core, which routes to identity, threat detection, and
+SIEM stations, all feeding an audit ledger at the center; isometric, enterprise blue/graphite
+palette"
+style="isometric, enterprise, clean"
+replaces="mermaid-above"
+-->
 
 ## What this repo is (and isn't)
 
