@@ -1,5 +1,7 @@
 # Architecture
 
+![Architecture Diagram](assets/arch.png)
+
 The Cloud Security Service is a comprehensive, scalable, measurable security posture model
 across Azure and hybrid environments, connecting platform engineering, security operations, and
 application teams to a controls-as-code foundation.
